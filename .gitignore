@@ -14,5 +14,10 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Other files to be ignored.
 *~
 .secret
+.yardoc/
+doc/
+foobar
