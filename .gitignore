@@ -21,3 +21,4 @@
 .yardoc/
 doc/
 foobar
+.DS_Store
