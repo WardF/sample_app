@@ -17,8 +17,20 @@ describe User do
   end
 
   describe "when email is not present" do
-    before { @user.name = " " }
+    before { @user.email = " " }
     it { should_not be_valid }
   end
+
+  describe "when name is too long" do
+    before { @user.name = "a" * 51 }
+    it { should_not be_valid }
+  end
+
+  describe "when name is too short" do
+    before { @user.name = "a" }
+    it { should_not be_valid }
+  end
+
+
 
 end
