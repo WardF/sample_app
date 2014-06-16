@@ -9,6 +9,8 @@ class User < ActiveRecord::Base
                     uniqueness: { case_sensitive: false }
 
  
-  validates :password, presence: true, length: { minimum: 6 }
+  # Order doesn't matter for the next two lines.
   has_secure_password  
+  validates :password, presence: true, length: { minimum: 6 }
+  
 end
